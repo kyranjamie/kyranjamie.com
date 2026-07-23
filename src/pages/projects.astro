@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const projects = [
+  { title: 'Blockport', url: 'https://blockport.io', description: "Joined Blockport in March 2018 as Lead Frontend Developer. Within 6 months, we'd built the initial version of the cryptocurrency exchange, allowing users to buy, sell, withdraw and deposit funds." },
+  { title: 'Cryptoscore', url: 'https://cryptosco.re', description: "Started CryptoScore with the goal of launching a side project. Released a prototype within 2 months. Its data is now outdated, but it's still online to check out." },
+  { title: 'GoldRepublic', url: 'https://www.goldrepublic.com', description: "Worked with some talented engineers to entirely rebuild the company's CRM platform for managing customers of its precious metal trading business." },
+  { title: 'Usabilla', url: 'https://usabilla.com', description: "Rebuilt the company's product, replacing a legacy PHP backend-driven application with a single-page application." },
+  { title: 'Appsbroker', url: 'https://www.appsbroker.com', description: "At Appsbroker we adopted Angular.js to build web applications for customers of Google's App suite." },
+]
+---
+
+<Layout title="Projects · @kyranjamie">
+  <section class="projects">
+    {projects.map((project) => (
+      <article>
+        <h1>{project.title}</h1>
+        <a class="project-link" href={project.url}>{project.url}</a>
+        <p>{project.description}</p>
+      </article>
+    ))}
+  </section>
+</Layout>
