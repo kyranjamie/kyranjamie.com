@@ -141,7 +141,7 @@ footer a:hover {
 
 .name-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -152,9 +152,26 @@ footer a:hover {
 }
 
 .name-card h1 {
-  margin: 8px 0 12px;
+  margin: 0 0 6px;
   font-size: 16px;
   font-weight: normal;
+}
+
+.availability {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.availability span {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #1ccd1d;
 }
 
 .intro,
@@ -185,5 +202,18 @@ footer a:hover {
   .site-container {
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  .name-card {
+    position: relative;
+    min-height: 50px;
+  }
+
+  .name-card img {
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    margin-right: 0;
+    transform: translateY(-50%);
   }
 }
