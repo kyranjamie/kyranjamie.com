@@ -111,6 +111,7 @@ a:focus::before,
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  margin: 0 auto;
   max-width: 640px;
   padding: 16px 24px;
 }
@@ -174,16 +175,20 @@ footer a:hover {
   background: #1ccd1d;
 }
 
-.intro,
-.projects {
-  max-width: 680px;
-}
-
 .intro {
   margin-top: 16px;
 }
 
-.projects article h1 {
+.projects {
+  margin-top: 32px;
+}
+
+.projects > h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.projects article h3 {
   margin-top: 20px;
   font-size: 16px;
 }
@@ -196,24 +201,4 @@ footer a:hover {
 .project-link {
   margin-bottom: 2px;
   color: #666;
-}
-
-@media (min-width: 1280px) {
-  .site-container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  .name-card {
-    position: relative;
-    min-height: 50px;
-  }
-
-  .name-card img {
-    position: absolute;
-    top: 50%;
-    left: -80px;
-    margin-right: 0;
-    transform: translateY(-50%);
-  }
 }
