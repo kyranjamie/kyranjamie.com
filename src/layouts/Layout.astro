@@ -5,7 +5,7 @@ interface Props {
   title?: string
 }
 
-const { title = '@kyranjamie' } = Astro.props
+const { title = 'Kyran Jamie — Software engineer' } = Astro.props
 ---
 
 <!doctype html>
@@ -13,19 +13,24 @@ const { title = '@kyranjamie' } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Personal website of frontend developer Kyran Burraston, @kyranjamie" />
+    <meta
+      name="description"
+      content="Personal website of software engineer Kyran Jamie, @kyranjamie"
+    />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>{title}</title>
   </head>
   <body>
     <div class="site-container">
-      <header><a href="/">kyranjamie.com</a></header>
       <main><slot /></main>
       <footer>
-        <a href="https://github.com/kyranjamie">GitHub</a>
-        <a href="https://stackoverflow.com/users/1141891/kyranjamie">Stack Overflow</a>
-        <a href="https://www.linkedin.com/in/kyranjamie/">LinkedIn</a>
-        <a href="https://twitter.com/kyranjamie">X</a>
+        <h2>Links</h2>
+        <p>
+          Find my code on <a href="https://github.com/kyranjamie">GitHub</a>, my work history on{' '}
+          <a href="https://www.linkedin.com/in/kyranjamie/">LinkedIn</a>, and my most upvoted answer
+          on <a href="https://stackoverflow.com/a/52191003">Stack Overflow</a>. You can also view my{' '}
+          <a href="/pgp.asc" target="_blank" rel="noopener noreferrer">PGP public key</a>.
+        </p>
       </footer>
     </div>
   </body>

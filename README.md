@@ -1,3 +1,3 @@
 ## kyranjamie.com
 
-Source code for personal website of Kyran Burraston
+Source code for the personal website of Kyran Jamie

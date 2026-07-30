@@ -1,0 +1,16 @@
+# Kyran Jamie
+
+> Personal website of Kyran Jamie, a software engineer who makes complicated digital products feel simple.
+
+Kyran focuses on accessible interfaces, fast applications, useful data visualisation, and maintainable code. His selected work includes Leather, Blockport, GoldRepublic, and Usabilla.
+
+## Site content
+
+- [Home page](https://kyranjamie.com/index.html.md): A concise Markdown version of Kyran's profile, selected work, and professional links.
+
+## Optional
+
+- [GitHub](https://github.com/kyranjamie): Kyran's public code and open-source activity.
+- [LinkedIn](https://www.linkedin.com/in/kyranjamie/): Kyran's professional work history.
+- [Stack Overflow](https://stackoverflow.com/a/52191003): Kyran's most upvoted Stack Overflow answer.
+- [PGP public key](https://kyranjamie.com/pgp.asc): Kyran's public key for encrypted communication and signature verification.

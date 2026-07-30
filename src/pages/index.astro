@@ -5,81 +5,64 @@ const projects = [
   {
     title: 'Leather',
     url: 'https://leather.io',
-    description:
-      'Helped build Leather, a wallet for Bitcoin and Stacks, as part of the Stacks cryptocurrency ecosystem.',
+    linkLabel: 'leather.io',
+    description: 'Led the engineering team at Leather, a wallet for Bitcoin and Stacks',
   },
   {
     title: 'Blockport',
     url: 'https://web.archive.org/web/20191216074054/https://blockport.io/',
     linkLabel: 'blockport.io',
-    description:
-      "Joined Blockport in March 2018 as Lead Frontend Developer. Within 6 months, we'd built the initial version of the cryptocurrency exchange, allowing users to buy, sell, withdraw and deposit funds.",
-  },
-  {
-    title: 'Cryptoscore',
-    url: 'https://web.archive.org/web/20191115223940/https://cryptosco.re/',
-    linkLabel: 'cryptosco.re',
-    description:
-      'Created CryptoScore as a side project and released the first prototype within two months. The project is no longer online.',
+    description: 'Led the frontend team at Blockport, a cryptocurrency exchange start up',
   },
   {
     title: 'GoldRepublic',
-    url: 'https://www.goldrepublic.com',
+    url: 'https://www.goldrepublic.com/en-gb',
+    linkLabel: 'goldrepublic.com',
     description:
-      "Worked with some talented engineers to entirely rebuild the company's CRM platform for managing customers of its precious metal trading business.",
+      'Modernised GoldRepublic’s platform for managing customers in its precious-metals trading business',
   },
   {
     title: 'Usabilla',
     url: 'https://web.archive.org/web/20181228015654/https://usabilla.com/',
     linkLabel: 'usabilla.com',
     description:
-      "Rebuilt the company's product, replacing a legacy PHP backend-driven application with a single-page application.",
-  },
-  {
-    title: 'Appsbroker',
-    url: 'https://web.archive.org/web/20170107004458/http://www.appsbroker.com/',
-    linkLabel: 'appsbroker.com',
-    description:
-      "At Appsbroker we adopted Angular.js to build web applications for customers of Google's App suite.",
+      'Rebuilt Usabilla’s product as a single-page application, replacing its legacy PHP-driven interface.',
   },
 ]
 ---
 
 <Layout>
-  <section class="name-card">
-    <img src="/assets/me.webp" alt="Portrait of Kyran Burraston" width="50" height="50" />
-    <div>
-      <h1>Kyran Jamie Burraston</h1>
-      <p class="availability"><span aria-hidden="true"></span>Open to interesting collaborations</p>
-    </div>
-  </section>
+  <header class="intro-header">
+    <h1><a href="/">Kyran Jamie</a></h1>
+    <p>Software engineer</p>
+  </header>
   <section class="intro">
+    <p>I make complicated digital products feel simple.</p>
     <p>
-      Thanks for stopping by. I’m Kyran, an increasingly generalist software
-      engineer who enjoys making complicated things feel simple.
-    </p>
-    <p>
-      Over the years, I’ve helped companies such as{' '}
+      I’ve built and improved digital products for{' '}
       <a href="https://web.archive.org/web/20181228015654/https://usabilla.com/">Usabilla</a>,{' '}
       <a href="https://www.goldrepublic.com/">GoldRepublic</a>, and{' '}
-      <a href="https://web.archive.org/web/20191216074054/https://blockport.io/">Blockport</a> build and improve their
-      digital products. More recently, I worked in the Stacks cryptocurrency
-      ecosystem, helping to build{' '}
+      <a href="https://web.archive.org/web/20191216074054/https://blockport.io/">Blockport</a>. More
+      recently, I helped build{' '}
       <a href="https://leather.io/">Leather</a>, a wallet for Bitcoin and Stacks.
     </p>
     <p>
-      I care about accessible interfaces, fast applications, useful data
-      visualisation, and code that remains understandable as a product evolves.
+      I care about accessible interfaces, fast applications, useful data visualisation, and code
+      that remains understandable as a product evolves.
     </p>
   </section>
   <section class="projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Projects</h2>
-    {projects.map((project) => (
-      <article>
-        <h3>{project.title}</h3>
-        <a class="project-link" href={project.url}>{project.linkLabel ?? project.url}</a>
-        <p>{project.description}</p>
-      </article>
-    ))}
+    <h2 id="projects-heading">Selected work</h2>
+    {
+      projects.map((project) => (
+        <article>
+          <h3>{project.title}</h3>
+          <a class="project-link" href={project.url}>
+            {project.linkLabel ?? project.url}
+          </a>
+          <p>{project.description}</p>
+        </article>
+      ))
+    }
   </section>
 </Layout>
