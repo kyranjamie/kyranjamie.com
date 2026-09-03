@@ -6,33 +6,26 @@ const projects = [
     title: 'Leather',
     url: 'https://leather.io',
     linkLabel: 'leather.io',
-    description:
-      'Engineering Lead. Led the team and product engineering for Bitcoin and Stacks wallet.',
   },
   {
     title: 'Hiro Systems',
     url: 'https://hiro.so',
     linkLabel: 'hiro.so',
-    description:
-      'Senior Software Engineer. Built user- and developer-facing tooling for Bitcoin and Stacks.',
   },
   {
     title: 'Blockport',
     url: 'https://web.archive.org/web/20191216074054/https://blockport.io/',
     linkLabel: 'blockport.io',
-    description: 'Frontend Lead. Built Blockport’s cryptocurrency trading frontend.',
   },
   {
     title: 'GoldRepublic',
     url: 'https://www.goldrepublic.com/en-gb',
     linkLabel: 'goldrepublic.com',
-    description: 'Frontend Lead. Modernised aging CRM platform for precious metal trading company.',
   },
   {
     title: 'Usabilla',
     url: 'https://web.archive.org/web/20181228015654/https://usabilla.com/',
     linkLabel: 'usabilla.com',
-    description: 'Frontend Developer. Built software to analyse user feedback.',
   },
 ]
 ---
@@ -43,9 +36,10 @@ const projects = [
     <p>Software engineer</p>
   </header>
   <section class="intro">
+    <p>I work with computers both for fun and adequate renumeration.</p>
+
     <p>
-      I create and grow digital products. Until recently as Engineering Lead for Leather, building a
-      Bitcoin and Stacks wallet <a
+      Most recently I was Engineering Lead for Leather, building a Bitcoin and Stacks wallet <a
         href="https://chromewebstore.google.com/detail/leather/ldinpeekobnhjjdofggfgjlcehhmanlj?hl=en"
         >Web Extension
       </a> and <a href="https://apps.apple.com/us/app/leather-bitcoin-defi-wallet/id6499127775"
@@ -55,7 +49,10 @@ const projects = [
       > app.
     </p>
 
-    <p>I'm interested in finance, economics, AI, privacy and digital sovereignty.</p>
+    <p>
+      I'm interested in finance, economics, artificial intelligence, privacy, and digital
+      sovereignty.
+    </p>
   </section>
   <section class="projects" aria-labelledby="projects-heading">
     <h2 id="projects-heading">Work</h2>
@@ -66,7 +63,6 @@ const projects = [
           <a class="project-link" href={project.url}>
             {project.linkLabel ?? project.url}
           </a>
-          <p>{project.description}</p>
         </article>
       ))
     }
