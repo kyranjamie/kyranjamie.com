@@ -1,4 +1,6 @@
 ---
+import { Font } from 'astro:assets'
+
 import '../styles/global.css'
 
 interface Props {
@@ -18,17 +20,22 @@ const { title = 'Kyran Jamie — Software engineer' } = Astro.props
       content="Personal website of software engineer Kyran Jamie, @kyranjamie"
     />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <Font cssVariable="--font-commit-mono" preload />
     <title>{title}</title>
   </head>
   <body>
     <div class="site-container">
+      <slot name="header" />
       <main><slot /></main>
       <footer>
         <h2>Links</h2>
         <p>
-          Find my code on <a href="https://github.com/kyranjamie">GitHub</a>, my work history on{' '}
-          <a href="https://www.linkedin.com/in/kyranjamie/">LinkedIn</a>, and my most upvoted answer
-          on <a href="https://stackoverflow.com/a/52191003">Stack Overflow</a>. You can also view my{' '}
+          Find my code on <a href="https://github.com/kyranjamie">GitHub</a>, my work history on{
+            ' '
+          }
+          <a href="https://www.linkedin.com/in/kyranjamie/">LinkedIn</a>, and for posterity my <a
+            href="https://stackoverflow.com/users/1141891/kyranjamie">Stack Overflow</a
+          >. You can also download my{' '}
           <a href="/pgp.asc" target="_blank" rel="noopener noreferrer">PGP public key</a>.
         </p>
       </footer>

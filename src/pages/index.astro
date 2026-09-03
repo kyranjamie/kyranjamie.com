@@ -6,53 +6,59 @@ const projects = [
     title: 'Leather',
     url: 'https://leather.io',
     linkLabel: 'leather.io',
-    description: 'Led the engineering team at Leather, a wallet for Bitcoin and Stacks',
+    description:
+      'Engineering Lead. Led the team and product engineering for Bitcoin and Stacks wallet.',
+  },
+  {
+    title: 'Hiro Systems',
+    url: 'https://hiro.so',
+    linkLabel: 'hiro.so',
+    description:
+      'Senior Software Engineer. Built user- and developer-facing tooling for Bitcoin and Stacks.',
   },
   {
     title: 'Blockport',
     url: 'https://web.archive.org/web/20191216074054/https://blockport.io/',
     linkLabel: 'blockport.io',
-    description: 'Led the frontend team at Blockport, a cryptocurrency exchange start up',
+    description: 'Frontend Lead. Built Blockport’s cryptocurrency trading frontend.',
   },
   {
     title: 'GoldRepublic',
     url: 'https://www.goldrepublic.com/en-gb',
     linkLabel: 'goldrepublic.com',
-    description:
-      'Modernised GoldRepublic’s platform for managing customers in its precious-metals trading business',
+    description: 'Frontend Lead. Modernised aging CRM platform for precious metal trading company.',
   },
   {
     title: 'Usabilla',
     url: 'https://web.archive.org/web/20181228015654/https://usabilla.com/',
     linkLabel: 'usabilla.com',
-    description:
-      'Rebuilt Usabilla’s product as a single-page application, replacing its legacy PHP-driven interface.',
+    description: 'Frontend Developer. Built software to analyse user feedback.',
   },
 ]
 ---
 
 <Layout>
-  <header class="intro-header">
+  <header slot="header" class="intro-header">
     <h1><a href="/">Kyran Jamie</a></h1>
     <p>Software engineer</p>
   </header>
   <section class="intro">
-    <p>I make complicated digital products feel simple.</p>
     <p>
-      I’ve built and improved digital products for{' '}
-      <a href="https://web.archive.org/web/20181228015654/https://usabilla.com/">Usabilla</a>,{' '}
-      <a href="https://www.goldrepublic.com/">GoldRepublic</a>, and{' '}
-      <a href="https://web.archive.org/web/20191216074054/https://blockport.io/">Blockport</a>. More
-      recently, I helped build{' '}
-      <a href="https://leather.io/">Leather</a>, a wallet for Bitcoin and Stacks.
+      I create and grow digital products. Until recently as Engineering Lead for Leather, building a
+      Bitcoin and Stacks wallet <a
+        href="https://chromewebstore.google.com/detail/leather/ldinpeekobnhjjdofggfgjlcehhmanlj?hl=en"
+        >Web Extension
+      </a> and <a href="https://apps.apple.com/us/app/leather-bitcoin-defi-wallet/id6499127775"
+        >iOS</a
+      > and <a href="https://play.google.com/store/apps/details?id=io.leather.mobilewallet&hl=en"
+        >Android</a
+      > app.
     </p>
-    <p>
-      I care about accessible interfaces, fast applications, useful data visualisation, and code
-      that remains understandable as a product evolves.
-    </p>
+
+    <p>I'm interested in finance, economics, AI, privacy and digital sovereignty.</p>
   </section>
   <section class="projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Selected work</h2>
+    <h2 id="projects-heading">Work</h2>
     {
       projects.map((project) => (
         <article>
