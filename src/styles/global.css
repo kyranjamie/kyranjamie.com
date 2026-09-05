@@ -8,6 +8,7 @@
   --space-s: 1rem;
   --space-m: 1.5rem;
   --space-l: 3rem;
+  --content-indent: 1ch;
   --page-margin-inline: clamp(1.5rem, 8vw, 7rem);
   --page-margin-top: clamp(5rem, 12vh, 8rem);
 }
@@ -104,7 +105,7 @@ a:focus-visible::before {
   width: 100%;
   max-width: calc(68ch + 2 * var(--page-margin-inline));
   margin-inline: auto;
-  padding: var(--page-margin-top) var(--page-margin-inline) var(--space-s);
+  padding: var(--page-margin-top) var(--page-margin-inline);
 }
 
 .intro-header {
@@ -117,11 +118,16 @@ a:focus-visible::before {
 }
 
 footer {
-  padding: var(--space-m) 0 var(--space-l);
+  padding: var(--space-m) 0 0;
 }
 
 .intro-header > * + * {
   margin-top: var(--space-xs);
+}
+
+.intro-header p,
+.intro {
+  padding-inline-start: var(--content-indent);
 }
 
 .intro-header h1 a {
@@ -129,7 +135,7 @@ footer {
 }
 
 .intro-header p,
-.projects article > p {
+.link-list article > p {
   color: var(--subdued-text-color);
 }
 
@@ -138,14 +144,18 @@ footer > * + * {
   margin-top: var(--space-m);
 }
 
-.projects > h2 {
+.link-list > h2 {
   margin-bottom: var(--space-m);
 }
 
-.projects article + article {
+.link-list article {
+  padding-inline-start: var(--content-indent);
+}
+
+.link-list article + article {
   margin-top: var(--space-m);
 }
 
-.projects article > * + * {
+.link-list article > * + * {
   margin-top: var(--space-xs);
 }

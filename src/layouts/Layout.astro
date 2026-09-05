@@ -27,17 +27,26 @@ const { title = 'Kyran Jamie — Software engineer' } = Astro.props
     <div class="site-container">
       <slot name="header" />
       <main><slot /></main>
-      <footer>
+      <footer class="link-list">
         <h2>Links</h2>
-        <p>
-          Find my code on <a href="https://github.com/kyranjamie">GitHub</a>, my work history on{
-            ' '
-          }
-          <a href="https://www.linkedin.com/in/kyranjamie/">LinkedIn</a>, and for posterity my <a
-            href="https://stackoverflow.com/users/1141891/kyranjamie">Stack Overflow</a
-          >. You can also download my{' '}
-          <a href="/pgp.asc" target="_blank" rel="noopener noreferrer">PGP public key</a>.
-        </p>
+        <article>
+          <h3>GitHub</h3>
+          <a href="https://github.com/kyranjamie">github.com/kyranjamie</a>
+        </article>
+        <article>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/kyranjamie/">linkedin.com/in/kyranjamie</a>
+        </article>
+        <article>
+          <h3>Stack Overflow</h3>
+          <a href="https://stackoverflow.com/users/1141891/kyranjamie">
+            stackoverflow.com/users/1141891/kyranjamie
+          </a>
+        </article>
+        <article>
+          <h3>PGP public key</h3>
+          <a href="/pgp.asc" target="_blank" rel="noopener noreferrer">kyranjamie.com/pgp.asc</a>
+        </article>
       </footer>
     </div>
   </body>
