@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kyranjamie-com-preview",
+  "compatibility_date": "2026-09-07",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+  },
+  "env": {
+    "production": {
+      "name": "kyranjamie-com",
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [
+        { "pattern": "kyranjamie.com", "custom_domain": true },
+        { "pattern": "www.kyranjamie.com", "custom_domain": true },
+      ],
+    },
+  },
+}

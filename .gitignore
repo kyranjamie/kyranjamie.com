@@ -57,6 +57,9 @@ typings/
 # Astro files
 .astro/
 dist/
+.wrangler/
+.dev.vars
+.dev.vars.*
 
 # Mac files
 .DS_Store
@@ -67,3 +70,4 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+.pnpm-store
