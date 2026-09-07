@@ -7,9 +7,6 @@
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page",
-    "headers": {
-      "Content-Security-Policy": "default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://assets.calibre.app; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"
-    },
   },
   "env": {
     "production": {

@@ -9,6 +9,7 @@ export default defineConfig({
       name: 'Commit Mono',
       cssVariable: '--font-commit-mono',
       options: {
+        display: 'swap',
         variants: [
           {
             src: ['./src/assets/fonts/CommitMono-VF.woff2'],

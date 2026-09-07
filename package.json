@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "astro build",
+    "check": "tsc --noEmit",
     "dev": "astro dev",
     "deploy": "pnpm build && wrangler deploy --env production",
     "deploy:preview": "pnpm build && wrangler deploy",

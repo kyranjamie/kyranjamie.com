@@ -2,6 +2,3 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   workerd: true
-minimumReleaseAgeExclude:
-  - p-queue
-  - postcss
