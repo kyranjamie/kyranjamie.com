@@ -16,3 +16,6 @@ dist/
 
 # Mac
 .DS_Store
+
+# Local editor settings
+.vscode/

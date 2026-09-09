@@ -137,17 +137,29 @@ footer {
   padding-inline-start: var(--content-indent);
 }
 
+.intro-header h1 {
+  position: relative;
+}
+
+.intro-header h1::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: -2ch;
+  top: 0.25em;
+  width: 1ch;
+  height: 1em;
+  background: currentColor;
+}
+
 .intro-header h1 a {
   color: inherit;
 }
 
-.intro-header p,
-.link-list article > p {
+.intro-header p {
   color: var(--subdued-text-color);
 }
 
-.intro > * + *,
-footer > * + * {
+.intro > * + * {
   margin-top: var(--space-m);
 }
 
@@ -155,14 +167,14 @@ footer > * + * {
   margin-bottom: var(--space-m);
 }
 
-.link-list article {
+.link-list > :not(h2) {
   padding-inline-start: var(--content-indent);
 }
 
-.link-list article + article {
+.link-list > * + h3 {
   margin-top: var(--space-m);
 }
 
-.link-list article > * + * {
+.link-list > h3 + p {
   margin-top: var(--space-xs);
 }

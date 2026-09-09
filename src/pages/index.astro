@@ -1,71 +1,22 @@
 ---
+import { Content as Header } from '../content/home/header.md'
+import { Content as Intro } from '../content/home/intro.md'
+import { Content as Work, getHeadings } from '../content/home/work.md'
+import { Content as Links } from '../content/home/links.md'
 import Layout from '../layouts/Layout.astro'
 
-const projects = [
-  {
-    title: 'Leather',
-    url: 'https://leather.io',
-    linkLabel: 'leather.io',
-  },
-  {
-    title: 'Hiro Systems',
-    url: 'https://hiro.so',
-    linkLabel: 'hiro.so',
-  },
-  {
-    title: 'Blockport',
-    url: 'https://web.archive.org/web/20191216074054/https://blockport.io/',
-    linkLabel: 'blockport.io',
-  },
-  {
-    title: 'GoldRepublic',
-    url: 'https://www.goldrepublic.com/en-gb',
-    linkLabel: 'goldrepublic.com',
-  },
-  {
-    title: 'Usabilla',
-    url: 'https://web.archive.org/web/20181228015654/https://usabilla.com/',
-    linkLabel: 'usabilla.com',
-  },
-]
+const workHeading = getHeadings().find((heading) => heading.depth === 2)
 ---
 
 <Layout>
   <header slot="header" class="intro-header">
-    <h1><a href="/">Kyran Jamie</a></h1>
-    <p>Software engineer</p>
+    <Header />
   </header>
   <section class="intro">
-    <p>I work with computers for fun and adequate remuneration.</p>
-
-    <p>
-      Most recently I was Engineering Lead for Leather, building a cryptocurrency wallet <a
-        href="https://chromewebstore.google.com/detail/leather/ldinpeekobnhjjdofggfgjlcehhmanlj?hl=en"
-        >Web Extension
-      </a>, <a href="https://apps.apple.com/us/app/leather-bitcoin-defi-wallet/id6499127775">iOS</a> and{
-        ' '
-      }
-      <a href="https://play.google.com/store/apps/details?id=io.leather.mobilewallet&hl=en"
-        >Android</a
-      > app.
-    </p>
-
-    <p>
-      I'm interested in finance, economics, artificial intelligence, privacy, and digital
-      sovereignty.
-    </p>
+    <Intro />
   </section>
-  <section class="projects link-list" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Work</h2>
-    {
-      projects.map((project) => (
-        <article>
-          <h3>{project.title}</h3>
-          <a class="project-link" href={project.url}>
-            {project.linkLabel ?? project.url}
-          </a>
-        </article>
-      ))
-    }
+  <section class="projects link-list" aria-labelledby={workHeading?.slug}>
+    <Work />
   </section>
+  <Links slot="footer" />
 </Layout>

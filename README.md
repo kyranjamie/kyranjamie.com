@@ -2,6 +2,22 @@
 
 Source code for the personal website of Kyran Jamie
 
+## Writing content
+
+Edit the plain Markdown files in `src/content/home/`:
+
+- `header.md`: name and role.
+- `intro.md`: introductory paragraphs. Reference links keep long URLs out of the prose.
+- `work.md`: work history, with a `###` heading and link paragraph for each entry.
+- `links.md`: profile links, using the same heading and paragraph format.
+
+`src/pages/index.astro` places these sections in the page; the layout and CSS own
+the HTML shell and appearance. Content edits need no HTML or JavaScript.
+The site uses Astro's built-in Markdown renderer, without MDX or custom parsing.
+
+`/index.html.md` is generated from the same files at build time, so the public
+Markdown version stays in sync. Run `pnpm dev` to preview edits.
+
 ## Development
 
 Use Node.js 24 and the pnpm version pinned in `package.json`.
@@ -13,6 +29,10 @@ pnpm dev
 
 `pnpm preview:worker` builds the site and serves it in Cloudflare's local runtime.
 `pnpm preview` uses Astro's preview server instead.
+
+`pnpm lint` checks JavaScript, TypeScript, and Astro components using recommended
+rules, including Astro accessibility checks. Run `pnpm lint:fix` for automatic
+fixes. Prettier handles formatting; `pnpm check` handles TypeScript type checking.
 
 ## Deployment
 
