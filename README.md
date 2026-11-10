@@ -20,19 +20,35 @@ Markdown version stays in sync. Run `pnpm dev` to preview edits.
 
 ## Development
 
-Use Node.js 24 and the pnpm version pinned in `package.json`.
+Develop inside the Dev Container so Node.js and installed packages stay in Docker.
+Open this repository in VS Code and choose **Dev Containers: Reopen in Container**,
+or use the CLI:
 
 ```sh
-pnpm install
-pnpm dev
+devcontainer up --workspace-folder .
+devcontainer exec --workspace-folder . pnpm dev
 ```
 
-`pnpm preview:worker` builds the site and serves it in Cloudflare's local runtime.
-`pnpm preview` uses Astro's preview server instead.
+The container uses the Node.js 24 Dev Container image and the pnpm version pinned
+in `package.json`. The workspace is shared with the host, so `node_modules` is visible
+on both host and container. pnpm keeps its download store in a container-only
+cache. Rebuild the container from VS Code's Command Palette with **Dev Containers:
+Rebuild Container**. To install dependencies again, run
+`devcontainer exec --workspace-folder . pnpm install --frozen-lockfile`.
 
-`pnpm lint` checks JavaScript, TypeScript, and Astro components using recommended
-rules, including Astro accessibility checks. Run `pnpm lint:fix` for automatic
-fixes. Prettier handles formatting; `pnpm check` handles TypeScript type checking.
+Run project commands through `devcontainer exec --workspace-folder .` from the
+host, or in the container terminal:
+
+```sh
+pnpm dev             # Astro at port 4321
+pnpm build
+pnpm check           # TypeScript check
+pnpm lint
+pnpm preview         # Preview the production build at port 4321
+pnpm preview:worker  # Cloudflare runtime at port 8787
+```
+
+`pnpm preview` requires `pnpm build` first.
 
 ## Deployment
 

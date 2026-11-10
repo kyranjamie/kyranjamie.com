@@ -4,16 +4,17 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "build": "astro build",
-    "check": "tsc --noEmit",
-    "lint": "eslint . --max-warnings 0",
-    "lint:fix": "eslint . --fix",
-    "dev": "astro dev",
-    "deploy": "pnpm build && wrangler deploy --env production",
-    "deploy:preview": "pnpm build && wrangler deploy",
-    "preview": "astro preview",
-    "preview:worker": "pnpm build && wrangler dev",
-    "start": "astro dev"
+    "build": "node ./scripts/require-devcontainer.mjs && astro build",
+    "check": "node ./scripts/require-devcontainer.mjs && tsc --noEmit",
+    "lint": "node ./scripts/require-devcontainer.mjs && eslint . --max-warnings 0",
+    "lint:fix": "node ./scripts/require-devcontainer.mjs && eslint . --fix",
+    "dev": "node ./scripts/require-devcontainer.mjs && astro dev",
+    "deploy": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler deploy --env production",
+    "deploy:preview": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler deploy",
+    "preview": "node ./scripts/require-devcontainer.mjs && astro preview",
+    "preview:worker": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler dev",
+    "start": "node ./scripts/require-devcontainer.mjs && astro dev",
+    "preinstall": "node ./scripts/require-devcontainer.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.0",
