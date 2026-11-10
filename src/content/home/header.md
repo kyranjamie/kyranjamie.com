@@ -1,3 +1,3 @@
 # [Kyran Jamie](/)
 
-Software engineer
+Software engineer, remote
