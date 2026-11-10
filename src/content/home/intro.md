@@ -1,5 +1,3 @@
-I work with computers for fun and adequate remuneration.
-
 Most recently I was Engineering Lead for Leather, building a cryptocurrency wallet [Web Extension][extension], [iOS][ios] and [Android][android] app.
 
 I'm interested in finance, economics, artificial intelligence, privacy, and digital sovereignty.

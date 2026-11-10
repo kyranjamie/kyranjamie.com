@@ -8,10 +8,21 @@
     "KYRANJAMIE_COM_CONTAINER": "1",
     "PNPM_CONFIG_PRODUCTION": "false"
   },
+  "appPort": [4321, 8787],
   "forwardPorts": [
     4321,
     8787
   ],
+  "portsAttributes": {
+    "4321": {
+      "label": "Astro development server",
+      "onAutoForward": "notify"
+    },
+    "8787": {
+      "label": "Wrangler preview server",
+      "onAutoForward": "notify"
+    }
+  },
   "postCreateCommand": "pnpm install --frozen-lockfile",
   "remoteUser": "node",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:24-bookworm"

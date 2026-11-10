@@ -132,11 +132,6 @@ footer {
   margin-top: var(--space-xs);
 }
 
-.intro-header p,
-.intro {
-  padding-inline-start: var(--content-indent);
-}
-
 .intro-header h1 {
   position: relative;
 }
@@ -165,10 +160,6 @@ footer {
 
 .link-list > h2 {
   margin-bottom: var(--space-m);
-}
-
-.link-list > :not(h2) {
-  padding-inline-start: var(--content-indent);
 }
 
 .link-list > * + h3 {

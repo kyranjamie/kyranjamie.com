@@ -8,12 +8,12 @@
     "check": "node ./scripts/require-devcontainer.mjs && tsc --noEmit",
     "lint": "node ./scripts/require-devcontainer.mjs && eslint . --max-warnings 0",
     "lint:fix": "node ./scripts/require-devcontainer.mjs && eslint . --fix",
-    "dev": "node ./scripts/require-devcontainer.mjs && astro dev",
+    "dev": "node ./scripts/require-devcontainer.mjs && astro dev --host 0.0.0.0",
     "deploy": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler deploy --env production",
     "deploy:preview": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler deploy",
     "preview": "node ./scripts/require-devcontainer.mjs && astro preview",
     "preview:worker": "node ./scripts/require-devcontainer.mjs && pnpm build && wrangler dev",
-    "start": "node ./scripts/require-devcontainer.mjs && astro dev",
+    "start": "node ./scripts/require-devcontainer.mjs && astro dev --host 0.0.0.0",
     "preinstall": "node ./scripts/require-devcontainer.mjs"
   },
   "devDependencies": {
