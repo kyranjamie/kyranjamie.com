@@ -1,10 +1,12 @@
 ---
 import { Content as Header } from '../content/home/header.md'
 import { Content as Intro } from '../content/home/intro.md'
+import { Content as Recently, getHeadings as getRecentlyHeadings } from '../content/home/recently.md'
 import { Content as Work, getHeadings } from '../content/home/work.md'
 import { Content as Links } from '../content/home/links.md'
 import Layout from '../layouts/Layout.astro'
 
+const recentlyHeading = getRecentlyHeadings().find((heading) => heading.depth === 2)
 const workHeading = getHeadings().find((heading) => heading.depth === 2)
 ---
 
@@ -14,6 +16,9 @@ const workHeading = getHeadings().find((heading) => heading.depth === 2)
   </header>
   <section class="intro">
     <Intro />
+  </section>
+  <section class="recently link-list" aria-labelledby={recentlyHeading?.slug}>
+    <Recently />
   </section>
   <section class="projects link-list" aria-labelledby={workHeading?.slug}>
     <Work />

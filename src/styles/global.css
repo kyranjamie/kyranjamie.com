@@ -120,6 +120,7 @@ a:focus-visible::before {
 }
 
 .intro,
+.recently,
 .projects {
   padding: var(--space-m) 0;
 }

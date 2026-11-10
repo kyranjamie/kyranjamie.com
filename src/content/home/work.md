@@ -1,4 +1,4 @@
-  ## Work
+## Work
 
 ### Leather
 
@@ -15,7 +15,3 @@
 ### GoldRepublic
 
 [goldrepublic.com](https://www.goldrepublic.com/en-gb)
-
-### Usabilla
-
-[usabilla.com](https://web.archive.org/web/20181228015654/https://usabilla.com/)

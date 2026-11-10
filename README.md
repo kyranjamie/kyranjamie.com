@@ -7,7 +7,8 @@ Source code for the personal website of Kyran Jamie
 Edit the plain Markdown files in `src/content/home/`:
 
 - `header.md`: name and role.
-- `intro.md`: introductory paragraphs. Reference links keep long URLs out of the prose.
+- `intro.md`: introductory text.
+- `recently.md`: recent role or project. Reference links keep long URLs out of the prose.
 - `work.md`: work history, with a `###` heading and link paragraph for each entry.
 - `links.md`: profile links, using the same heading and paragraph format.
 
